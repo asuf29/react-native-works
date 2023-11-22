@@ -3,11 +3,14 @@ import { StyleSheet, Text, View, SafeAreaView } from "react-native";
 
 export default function App() {
   return (
-    <SafeAreaView>
-      <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
+      <View style={styles.upper_view_container}>
         <Text style={{ color: "white" }}>Hello world</Text>
       </View>
-      <View style={styles.container}>
+      <View style={styles.center_view_container}>
+        <Text style={{ color: "white" }}>Hello React Native</Text>
+      </View>
+      <View style={styles.bottom_view_container}>
         <Text>Hii</Text>
       </View>
     </SafeAreaView>
@@ -17,10 +20,18 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#000",
-    margin: 10,
-    padding: 10,
-    alignItems: "center",
-    justifyContent: "center",
+    flexDirection: "row",
+  },
+  upper_view_container: {
+    flex: 1,
+    backgroundColor: "blue",
+  },
+  center_view_container: {
+    flex: 2,
+    backgroundColor: "black",
+  },
+  bottom_view_container: {
+    flex: 2,
+    backgroundColor: "yellow",
   },
 });
