@@ -4,15 +4,10 @@ import { StyleSheet, Text, View, SafeAreaView } from "react-native";
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.upper_view_container}>
-        <Text style={{ color: "white" }}>Hello world</Text>
-      </View>
-      <View style={styles.center_view_container}>
-        <Text style={{ color: "white" }}>Hello React Native</Text>
-      </View>
-      <View style={styles.bottom_view_container}>
-        <Text>Hii</Text>
-      </View>
+      <View style={styles.box_1}></View>
+      <View style={styles.box_2}></View>
+      <View style={styles.box_3}></View>
+      <View style={styles.box_4}></View>
     </SafeAreaView>
   );
 }
@@ -21,17 +16,28 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: "row",
+    backgroundColor: "navy",
+    justifyContent: "space-between",
+    alignItems: "center",
   },
-  upper_view_container: {
-    flex: 1,
-    backgroundColor: "blue",
+  box_1: {
+    width: 75,
+    height: 75,
+    backgroundColor: "gray",
   },
-  center_view_container: {
-    flex: 2,
-    backgroundColor: "black",
+  box_2: {
+    width: 75,
+    height: 75,
+    backgroundColor: "pink",
   },
-  bottom_view_container: {
-    flex: 2,
+  box_3: {
+    width: 75,
+    height: 75,
+    backgroundColor: "purple",
+  },
+  box_4: {
+    width: 75,
+    height: 75,
     backgroundColor: "yellow",
   },
 });
