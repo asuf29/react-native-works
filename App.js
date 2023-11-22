@@ -1,31 +1,16 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, Button } from "react-native";
+import React from "react";
+import { StyleSheet, Text, View, SafeAreaView } from "react-native";
 
 export default function App() {
-  // function sayHello() {
-  //   console.log("Hello");
-  // }
-
-  const sayHi = (label) => {
-    console.log("Hi " + label);
-  };
-
   return (
-    <View style={styles.container}>
-      <Text style={{ color: "#fff" }}>Hello World!</Text>
-      <Text style={{ color: "#fff" }}>Hello React Native!</Text>
-      <Button
-        title="Press Me!"
-        // onPress={() => {
-        //   console.log("Hello");
-        //   alert("HELLO");
-        // }}
-        onPress={() => sayHi("Asuf")}
-        disabled={false}
-        color="darkred"
-      />
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView>
+      <View style={styles.container}>
+        <Text style={{ color: "white" }}>Hello world</Text>
+      </View>
+      <View style={styles.container}>
+        <Text>Hii</Text>
+      </View>
+    </SafeAreaView>
   );
 }
 
@@ -33,6 +18,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#000",
+    margin: 10,
+    padding: 10,
     alignItems: "center",
     justifyContent: "center",
   },
