@@ -19,7 +19,7 @@ function App() {
       <Text>Number {number}</Text>
       <Text>Counter {counter}</Text>
       <Button title='Up!' onPress={() => setNumber(number + 1)} />
-      <Button title='Update Counter!' onPress={() => setNumber(number + 100)} />
+      <Button title='Update Counter!' onPress={() => setCounter(counter + 100)} />
     </SafeAreaView>
   )
 }
