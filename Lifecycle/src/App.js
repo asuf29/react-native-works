@@ -13,6 +13,10 @@ function App() {
     console.log('counter updated.. ');
   }, [counter]);
 
+  useEffect(() => {
+    console.log('Mounting..');
+  },[]);
+
   return (
     <SafeAreaView>
       <Text>Hello Lifecycle</Text>
