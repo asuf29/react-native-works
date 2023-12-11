@@ -1,6 +1,6 @@
 import React from 'react'
 import {View, Text, Image} from 'react-native';
-import styles from './SongCard.style';
+import styles from './SongCard.styles';
 
 const SongCard = (props) => {
   return(
