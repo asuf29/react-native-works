@@ -2,14 +2,16 @@ import React from 'react'
 import { SafeAreaView, Text, StyleSheet, Button} from 'react-native'
 
 function SecondScreen(props) {
-  function navigateToPage() {
+  console.log(props);
+  
+  function backToFirst() {
     props.navigation.navigate('FirstScreen') 
   }
 
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.text_input}>Second Screen</Text>
-      <Button title='Go To First Screen' onPress={navigateToPage}/>
+      <Button title='Go Back' onPress={backToFirst}/>
     </SafeAreaView>
   )
 }
