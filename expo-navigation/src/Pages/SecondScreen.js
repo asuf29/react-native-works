@@ -3,14 +3,17 @@ import { SafeAreaView, Text, StyleSheet, Button} from 'react-native'
 
 function SecondScreen(props) {
   console.log(props);
-  
+
+  const user = props.route.params.username;
+
   function backToFirst() {
     props.navigation.navigate('FirstScreen') 
   }
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.text_input}>Second Screen</Text>
+      <Text style={styles.text_input}>Hello from Second Screen</Text>
+      <Text>{user}</Text>
       <Button title='Go Back' onPress={backToFirst}/>
     </SafeAreaView>
   )
