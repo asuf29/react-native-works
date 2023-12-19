@@ -9,7 +9,13 @@ function App() {
   return(
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="WelcomeScreen" component={Welcome}/>
+        <Stack.Screen
+          name="WelcomeScreen" 
+          component={Welcome} 
+          options={{
+            headerShown: false,
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
