@@ -2,11 +2,14 @@ import React from 'react'
 import { SafeAreaView , Text, StyleSheet} from 'react-native'
 import Button from '../components/Button/Button';
 
-function Welcome() {
+function Welcome({navigation}) {
+  function goToMemberSign() {
+    navigation.navigate('MemberSignScreen');
+  }
   return(
     <SafeAreaView style={styles.container}>
-      <Text style={styles.header}>Welcome</Text>
-      <Button text="Üye Kaydı Oluştur" onPress={null}/>
+      <Text style={styles.header}>Kebap Fitness</Text>
+      <Button text="Üye Kaydı Oluştur" onPress={goToMemberSign}/>
     </SafeAreaView>
   );
 }
