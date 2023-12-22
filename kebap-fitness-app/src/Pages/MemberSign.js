@@ -2,8 +2,9 @@ import React, { useState } from 'react'
 import { SafeAreaView, Alert } from 'react-native'
 import Input from '../components/Input/Input';
 import Button from '../components/Button'
+import MemberResult from './MemberResult';
 
-function MemberSign() {
+function MemberSign({navigation}) {
   const [userName, setUserName] = useState('');
   const [userSurname, setUserSurname] = useState('');
   const [userAge, setUserAge] = useState('');
@@ -13,6 +14,7 @@ function MemberSign() {
 
     if(!userName || !userSurname || !userAge || !userMail) {
       Alert.alert('Kebap Fitness', 'Bilgiler Boş Bırakılamaz');
+      return;
     }
     const user = {
       userName,
@@ -20,7 +22,7 @@ function MemberSign() {
       userAge,
       userMail,
     };
-    console.log(user);
+    navigation.navigate('MemberResultScreen', {user});
   }
 
    return(
