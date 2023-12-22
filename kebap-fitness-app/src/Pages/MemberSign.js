@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { SafeAreaView } from 'react-native'
+import { SafeAreaView, Alert } from 'react-native'
 import Input from '../components/Input/Input';
 import Button from '../components/Button'
 
@@ -10,6 +10,10 @@ function MemberSign() {
   const [userMail, setUserMail] = useState('');
 
   function handleSubmit() {
+
+    if(!userName || !userSurname || !userAge || !userMail) {
+      Alert.alert('Kebap Fitness', 'Bilgiler Boş Bırakılamaz');
+    }
     const user = {
       userName,
       userSurname,
